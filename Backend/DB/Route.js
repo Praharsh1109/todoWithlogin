@@ -1,9 +1,10 @@
 const express = require('express');
-const { registrationQuery, selectQuery } = require('./queries');
+const { registrationQuery, selectQuery, login } = require('./queries');
 
 const router = express.Router();
 
-router.post('/i', registrationQuery);
+router.post('/insert', registrationQuery);
 router.get('/getdata', selectQuery);
+router.post('/login',login)
 
 module.exports = router;
