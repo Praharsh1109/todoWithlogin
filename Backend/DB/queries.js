@@ -19,7 +19,7 @@ const zodCheck = zod.object({
 
     const { data } = validationResult;
     client.query(
-        `INSERT INTO todo(username, password, firstname) VALUES ($1, $2, $3)`,
+        `INSERT INTO signup(username, password, firstname) VALUES ($1, $2, $3)`,
         [data.username, data.password, data.firstname],
         (err, result) => {
             if (err) {
@@ -33,7 +33,7 @@ const zodCheck = zod.object({
 }
 
 const selectQuery = (req,res)=>{
-    client.query("SELECT * FROM todo", (err, result) => {
+    client.query("SELECT * FROM public.signup", (err, result) => {
         if (err) {
             console.error("Error retrieving students:", err);
             res.status(500).json({ error: "Failed to retrieve students" });

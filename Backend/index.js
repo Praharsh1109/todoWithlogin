@@ -1,9 +1,10 @@
 const express = require('express');
 const route = require('./DB/Route');
-
+const cors = require('cors')
 const app = express();
 const port = 6000;
 
+app.use(cors())
 // Middleware to parse JSON requests (if needed)
 app.use(express.json());
 
