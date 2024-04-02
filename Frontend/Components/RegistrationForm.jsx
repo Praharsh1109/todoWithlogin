@@ -48,7 +48,7 @@ function RegistrationForm() {
           name="firstname"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="border rounded-md p-2 mt-2 w-full"
+          className="border rounded-md p-2 mt-2 w-full "
         />
         <input
           placeholder="Username"
